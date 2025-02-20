@@ -108,7 +108,7 @@ hr {
 @media (max-width: 600px) {
     .container{
         width: 95%;
-        max-height: 100vh;
+        max-height: 800px;
         
     }
 
