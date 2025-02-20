@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.calculator {
+    width:100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.container{
+    width: 60%;
+    min-height: 80vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;   /* Dynamic spacing (scales with screen size) */
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.screen{
+    margin: 30px;
+    width: 90%;
+    height: 80px;
+    border: 1px solid white;
+    text-align: right;
+    overflow:auto;
+    scrollbar-width: none;
+    font-size: 60px;
+    color: white;
+}
+
+.buttons{
+    /* margin-top: .5em; */
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.btn{
+    /* width: 4rem; */
+    /* width: calc(20% - 10px);*/    /*Dyanmic width adjustment */
+    flex-basis: calc(25% - 2vw); /* 4 columns per row */
+    height: 10vh; /* Dynamic height */
+    min-height: 50px; /* Ensures proper scaling */
+    max-height: 100px; /* Prevents excessive stretching */
+    /* height: 38px; */
+    padding: 5px;
+    margin: 10px;
+    font-size: 3rem;
+    text-align: center;
+    background-color: hsl(240, 4%, 16%);
+    font-weight: 900;
+    border-radius: 40%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btn:hover {
+    background-color: hsl(240, 4%, 32%);
+}
+.btn:active {
+    background-color: hsl(240, 4%, 50%);
+}
+
+.blue {
+    color: blue;
+    background-color: hsla(203, 96%, 20%, 0.251);
+}
+
+.blue:hover {
+    background-color: hsla(203, 96%, 40%, 0.251);
+}
+.blue:active {
+    background-color: hsla(203, 96%, 60%, 0.251);
+}
+
+.equal {
+    background-color: hsl(240, 100%, 50%);
+}
+
+.equal:hover {
+    background-color: hsl(240, 100%, 30%);
+}
+.equal:active {
+    background-color: hsl(240, 100%, 10%);
+}
+
+hr {
+
+
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .container{
+        width: 100%;
+        min-height: 100vh;
+        
+    }
+
+    .btn{
+        flex-basis: calc(20% - 3vw);
+        font-size: 2rem;
+        
+    }
+}
+
+@media (max-width: 1024px) {
+    .btn {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    .container{
+        height: 95vh;
+    }
+
+    .screen{
+        height: 100px;
+    }
+    .btn {
+        width: 2rem;
+    }
+
+}
+
+
+
+
+
