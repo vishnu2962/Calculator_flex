@@ -23,7 +23,7 @@ btn.forEach((button)=> {
 
         // Eliminating the 0 value at index 0
 
-        if (exp === '0' && !'+-X÷'.includes(value) ){
+        if ((exp === '0' || exp ==='00') && !'+-X÷'.includes(value) ){
             exp = value;
             div.innerHTML = exp;
             console.log(exp);
